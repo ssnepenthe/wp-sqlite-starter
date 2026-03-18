@@ -8,7 +8,7 @@ Installation is demonstrated below with WP-CLI but you can just as easily make m
 
 ```shell
 $ cd ~/my-projects-dir
-$ git clone https://github.com/ssnepenthe/wp-sqlite-starter my-project
+$ git clone https://github.com/ssnepenthe/wp-sqlite-starter.git my-project
 $ cd my-project
 $ composer config name 'my-vendor/my-project'
 $ composer install
