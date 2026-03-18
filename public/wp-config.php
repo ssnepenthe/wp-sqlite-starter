@@ -24,7 +24,7 @@
 define( 'DB_NAME', 'wordpress' );
 
 /** The directory where your sqlite database will be stored */
-define( 'DB_DIR', dirname(__DIR__) . '/database/' );
+define( 'DB_DIR', dirname( __DIR__ ) . '/database/' );
 
 /** The name of your sqlite database file */
 define( 'DB_FILE', 'db.sqlite' );
@@ -78,7 +78,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 }
 
 if ( ! defined( 'WP_DEBUG_LOG' ) && WP_DEBUG ) {
-	define( 'WP_DEBUG_LOG', dirname(__DIR__) . '/logs/debug.log' );
+	define( 'WP_DEBUG_LOG', dirname( __DIR__ ) . '/logs/debug.log' );
 }
 
 // @todo .env?
