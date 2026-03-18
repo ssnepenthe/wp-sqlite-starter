@@ -1,6 +1,6 @@
 # wp-sqlite-starter
 
-Get a local WordPress environment up and running quickly with SQLite.
+Get a local WordPress environment up and running quickly with Composer and SQLite.
 
 ## Usage
 
