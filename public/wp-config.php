@@ -77,8 +77,8 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 	define( 'WP_DEBUG', false );
 }
 
-if ( ! defined( 'WP_DEBUG_LOG' ) ) {
-	define( 'WP_DEBUG_LOG', true );
+if ( ! defined( 'WP_DEBUG_LOG' ) && WP_DEBUG ) {
+	define( 'WP_DEBUG_LOG', dirname(__DIR__) . '/logs/debug.log' );
 }
 
 // @todo .env?

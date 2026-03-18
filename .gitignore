@@ -14,7 +14,6 @@ public/wp-content/uploads/*
 !public/wp-content/uploads/.gitkeep
 public/wp-content/db.php
 
-# @todo Should we just ignore all .log files?
-public/wp-content/debug.log
+*.log
 
 vendor/
