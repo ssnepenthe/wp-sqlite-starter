@@ -1,0 +1,57 @@
+{
+    "name": "ssnepenthe/wp-sqlite-starter",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "psy/psysh": "*",
+        "roots/wordpress": "*",
+        "wp-plugin/sqlite-database-integration": "*",
+        "wp-theme/twentytwentyfive": "*"
+    },
+    "repositories": [
+        {
+            "name": "wp-composer",
+            "type": "composer",
+            "url": "https://repo.wp-composer.com",
+            "only": [
+                "wp-plugin/*",
+                "wp-theme/*"
+            ]
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php util/install-db-dropin.php"
+        ],
+        "post-install-cmd": [
+            "@php util/install-db-dropin.php"
+        ],
+        "post-update-cmd": [
+            "@php util/install-db-dropin.php"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "public/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "public/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "public/wp-content/themes/{$name}": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "public/wordpress"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

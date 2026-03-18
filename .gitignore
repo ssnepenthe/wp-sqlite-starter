@@ -1,0 +1,20 @@
+database/*
+!database/.gitkeep
+
+public/wordpress/
+
+# @todo Composer managed mu-plugins should be in gitignore, but is there a way we can allow others to be tracked.
+public/wp-content/mu-plugins/*
+!public/wp-content/mu-plugins/.gitkeep
+public/wp-content/plugins/*
+!public/wp-content/plugins/.gitkeep
+public/wp-content/themes/*
+!public/wp-content/themes/.gitkeep
+public/wp-content/uploads/*
+!public/wp-content/uploads/.gitkeep
+public/wp-content/db.php
+
+# @todo Should we just ignore all .log files?
+public/wp-content/debug.log
+
+vendor/
