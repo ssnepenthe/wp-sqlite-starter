@@ -51,9 +51,6 @@
         ],
         "post-update-cmd": [
             "@php util/install-db-dropin.php"
-        ],
-        "post-create-project-cmd": [
-            "@php util/install-db-dropin.php"
         ]
     }
 }
