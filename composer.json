@@ -3,7 +3,6 @@
     "description": "Starter repo for WordPress with Composer and SQLite",
     "license": "MIT",
     "type": "project",
-    "version": "1.0.0",
     "require": {
         "ext-hash": "*",
         "ext-json": "*",
