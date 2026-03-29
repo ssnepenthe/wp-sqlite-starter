@@ -7,23 +7,37 @@ Get a local WordPress environment up and running quickly with Composer and SQLit
 Installation is demonstrated below with WP-CLI but you can just as easily make manual updates to `composer.json` and `public/wp-config.php`, configure and start your server, and run the standard web installer.
 
 ```shell
-$ cd ~/my-projects-dir
-$ git clone https://github.com/ssnepenthe/wp-sqlite-starter.git my-project
-$ cd my-project
-$ composer config name 'my-vendor/my-project'
-$ composer install
+$ composer create-project ssnepenthe/wp-sqlite-starter /path/to/project
+```
+
+It is important to update salts before going any further:
+
+```shell
 $ wp config shuffle-salts
-# OPTIONAL: if you want to use/test the new AST-based SQLite driver
+```
+
+Optionally you may want to make some other updates to your site config. For example:
+
+ * `WP_SQLITE_AST_DRIVER` can be used to enable the new AST-based SQLite driver.
+ * `SQLITE_JOURNAL_MODE` can be used to set the SQLite journal mode.
+ * `WP_DEBUG` can be used enable debug mode. When set to `true` the default `wp-config.php` file will also set `WP_DEBUG_LOG`, `SAVEQUERIES`, `WP_DEBUG_DISPLAY`, `WP_DISABLE_FATAL_ERROR_HANDLER`, and `SCRIPT_DEBUG`.
+
+```shell
 $ wp config set WP_SQLITE_AST_DRIVER true --raw
-# OPTIONAL: set the SQLite journal mode
 $ wp config set SQLITE_JOURNAL_MODE WAL
-# OPTIONAL: set WP_DEBUG - the default wp-config.php will automatically handle other useful debugging constants based on the value of WP_DEBUG
 $ wp config set WP_DEBUG true --raw
-# The user password will automatically be generated for you.
-# OPTIONALLY: specify the password with --admin_password=password or use --prompt=admin_password and input a password when prompted.
+```
+
+Run the WordPress installer and enable pretty permalinks (substitute your preferred permalink structure):
+
+```shell
 $ wp core install --url=localhost:8080 --title='My Title' --admin_user=admin --admin_email=admin@example.com --skip-email
-# Sub in your preferred permalink structure.
 $ wp rewrite structure /%postname%/
+```
+
+And finally start the server:
+
+```shell
 $ wp server
 ```
 
