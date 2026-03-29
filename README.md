@@ -15,6 +15,8 @@ $ composer install
 $ wp config shuffle-salts
 # OPTIONAL: if you want to use/test the new AST-based SQLite driver
 $ wp config set WP_SQLITE_AST_DRIVER true --raw
+# OPTIONAL: set the SQLite journal mode
+$ wp config set SQLITE_JOURNAL_MODE WAL
 # OPTIONAL: set WP_DEBUG - the default wp-config.php will automatically handle other useful debugging constants based on the value of WP_DEBUG
 $ wp config set WP_DEBUG true --raw
 # The user password will automatically be generated for you.

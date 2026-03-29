@@ -40,6 +40,9 @@ define( 'DB_FILE', 'db.sqlite' );
  */
 define( 'WP_SQLITE_AST_DRIVER', false );
 
+/** The SQLite journal mode */
+define( 'SQLITE_JOURNAL_MODE', 'DELETE' );
+
 /**#@+
  * Authentication unique keys and salts.
  *
