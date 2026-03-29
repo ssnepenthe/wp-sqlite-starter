@@ -1,6 +1,7 @@
 {
     "name": "ssnepenthe/wp-sqlite-starter",
     "license": "MIT",
+    "type": "project",
     "version": "1.0.0",
     "require": {
         "ext-pdo": "*",
