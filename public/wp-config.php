@@ -88,8 +88,27 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 	define( 'WP_DEBUG', false );
 }
 
-if ( ! defined( 'WP_DEBUG_LOG' ) && WP_DEBUG ) {
-	define( 'WP_DEBUG_LOG', dirname( __DIR__ ) . '/logs/debug.log' );
+if ( WP_DEBUG ) {
+	if ( ! defined( 'WP_DEBUG_LOG' ) ) {
+		define( 'WP_DEBUG_LOG', dirname( __DIR__ ) . '/logs/debug.log' );
+	}
+
+	if ( ! defined( 'SAVEQUERIES' ) ) {
+		define( 'SAVEQUERIES', true );
+	}
+
+	if ( ! defined( 'WP_DEBUG_DISPLAY' ) ) {
+		define( 'WP_DEBUG_DISPLAY', true );
+		ini_set( 'display_errors', '1' );
+	}
+
+	if ( ! defined( 'WP_DISABLE_FATAL_ERROR_HANDLER' ) ) {
+		define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );
+	}
+
+	if ( ! defined( 'SCRIPT_DEBUG' ) ) {
+		define( 'SCRIPT_DEBUG', true );
+	}
 }
 
 // @todo .env?
