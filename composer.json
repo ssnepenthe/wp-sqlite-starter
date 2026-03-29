@@ -5,6 +5,7 @@
     "require": {
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
+        "composer/installers": "^2.3",
         "psy/psysh": "*",
         "roots/bedrock-autoloader": "^1.1",
         "roots/wordpress": "*",
