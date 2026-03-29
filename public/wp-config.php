@@ -75,6 +75,11 @@ $table_prefix = 'wp_';
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+/** This site is managed with Composer - we don't want automatic updates overwriting anything */
+if ( ! defined( 'AUTOMATIC_UPDATER_DISABLED' ) ) {
+	define( 'AUTOMATIC_UPDATER_DISABLED', true );
+}
+
 /**
  * For developers: WordPress debugging mode.
  *
