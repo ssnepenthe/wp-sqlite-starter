@@ -1,7 +1,7 @@
 {
     "name": "ssnepenthe/wp-sqlite-starter",
-    "version": "1.0.0",
     "license": "MIT",
+    "version": "1.0.0",
     "require": {
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
@@ -13,27 +13,18 @@
     },
     "repositories": [
         {
-            "name": "wp-packages",
             "type": "composer",
-            "url": "https://repo.wp-packages.org"
+            "url": "https://repo.wp-packages.org",
+            "name": "wp-packages"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
         "allow-plugins": {
-            "roots/wordpress-core-installer": true,
-            "composer/installers": true
+            "composer/installers": true,
+            "roots/wordpress-core-installer": true
         }
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "@php util/install-db-dropin.php"
-        ],
-        "post-install-cmd": [
-            "@php util/install-db-dropin.php"
-        ],
-        "post-update-cmd": [
-            "@php util/install-db-dropin.php"
-        ]
     },
     "extra": {
         "installer-paths": {
@@ -50,6 +41,15 @@
         },
         "wordpress-install-dir": "public/wordpress"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "post-install-cmd": [
+            "@php util/install-db-dropin.php"
+        ],
+        "post-update-cmd": [
+            "@php util/install-db-dropin.php"
+        ],
+        "post-create-project-cmd": [
+            "@php util/install-db-dropin.php"
+        ]
+    }
 }
