@@ -4,6 +4,8 @@
     "type": "project",
     "version": "1.0.0",
     "require": {
+        "ext-hash": "*",
+        "ext-json": "*",
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
         "composer/installers": "^2.3",
