@@ -31,6 +31,15 @@ define( 'DB_DIR', dirname( __DIR__ ) . '/database/' );
 /** The name of your sqlite database file */
 define( 'DB_FILE', 'db.sqlite' );
 
+/**
+ * Whether to use the new AST-based SQLite driver. At some point in the future the new driver will become default and
+ * this constant can be removed completely.
+ *
+ * @see https://github.com/WordPress/sqlite-database-integration/issues/162
+ * @see https://github.com/WordPress/sqlite-database-integration/issues/195
+ */
+define( 'WP_SQLITE_AST_DRIVER', false );
+
 /**#@+
  * Authentication unique keys and salts.
  *

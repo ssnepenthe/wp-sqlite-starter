@@ -13,6 +13,8 @@ $ cd my-project
 $ composer config name 'my-vendor/my-project'
 $ composer install
 $ wp config shuffle-salts
+# OPTIONAL: if you want to use/test the new AST-based SQLite driver
+$ wp config set WP_SQLITE_AST_DRIVER true --raw
 # The user password will automatically be generated for you.
 # OPTIONALLY: specify the password with --admin_password=password or use --prompt=admin_password and input a password when prompted.
 $ wp core install --url=localhost:8080 --title='My Title' --admin_user=admin --admin_email=admin@example.com --skip-email
