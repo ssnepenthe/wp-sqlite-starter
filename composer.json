@@ -1,5 +1,6 @@
 {
     "name": "ssnepenthe/wp-sqlite-starter",
+    "description": "Starter repo for WordPress with Composer and SQLite",
     "license": "MIT",
     "type": "project",
     "version": "1.0.0",
