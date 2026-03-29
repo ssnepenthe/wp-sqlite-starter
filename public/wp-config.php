@@ -19,6 +19,8 @@
  * @package WordPress
  */
 
+require_once dirname( __DIR__ ) . '/vendor/autoload.php';
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'wordpress' );

@@ -6,6 +6,7 @@
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
         "psy/psysh": "*",
+        "roots/bedrock-autoloader": "^1.1",
         "roots/wordpress": "*",
         "wp-plugin/sqlite-database-integration": "*",
         "wp-theme/twentytwentyfive": "*"
@@ -37,7 +38,8 @@
     "extra": {
         "installer-paths": {
             "public/wp-content/mu-plugins/{$name}/": [
-                "type:wordpress-muplugin"
+                "type:wordpress-muplugin",
+                "wp-plugin/sqlite-database-integration"
             ],
             "public/wp-content/plugins/{$name}/": [
                 "type:wordpress-plugin"

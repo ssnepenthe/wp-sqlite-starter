@@ -1,7 +1,7 @@
 <?php
 
 (function () {
-    $dropinSource = dirname(__DIR__) . '/public/wp-content/plugins/sqlite-database-integration/db.copy';
+    $dropinSource = dirname(__DIR__) . '/public/wp-content/mu-plugins/sqlite-database-integration/db.copy';
 
     if (! file_exists($dropinSource)) {
         throw new RuntimeException('SQLite database integration DB dropin file does not exists - did you run "composer install"?');
@@ -15,7 +15,7 @@
 
     $prepared = str_replace(
         ['{SQLITE_IMPLEMENTATION_FOLDER_PATH}', '{SQLITE_PLUGIN}'],
-        [dirname(__DIR__) . '/public/wp-content/plugins/sqlite-database-integration', 'sqlite-database-integration/load.php'],
+        [dirname(__DIR__) . '/public/wp-content/mu-plugins/sqlite-database-integration', 'sqlite-database-integration/load.php'],
         $contents,
     );
 

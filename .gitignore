@@ -3,9 +3,7 @@ database/*
 
 public/wordpress/
 
-# @todo Composer managed mu-plugins should be in gitignore, but is there a way we can allow others to be tracked.
-public/wp-content/mu-plugins/*
-!public/wp-content/mu-plugins/.gitkeep
+public/wp-content/mu-plugins/*/
 public/wp-content/plugins/*
 !public/wp-content/plugins/.gitkeep
 public/wp-content/themes/*
